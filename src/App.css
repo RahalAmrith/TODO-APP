@@ -1,38 +1,158 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#root {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #ff9068;
+  background: linear-gradient(45deg, #fd746c, #ff9068);
+  height: 100%;
+  padding: 2.5vh 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.todos {
+  width: 100%;
+  height: 90%;
+  max-width: 575px;
+  background-color: #ffffff;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todos h1 {
+  color: #575757;
+  font-family: cursive;
+}
+
+.todo_container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.todo_container ul {
+  /* width: 100%; */
+  margin-left: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #b8b8b8;
+}
+
+.todo_container ul li {
+  list-style: none;
+  color: #575757;
+  padding: 8px;
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+  margin: 0px 0px;
+  padding: 15px 0px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  transition-duration: 0.3s;
+  text-transform: capitalize;
+  border-top: solid 1px #b8b8b8;
+}
+
+.todo_container ul li:first-child {
+  border-top: none;
+}
+
+.todo_container ul li span {
+  transition-duration: 1s;
+}
+
+.todo_container ul li .comp {
+  text-decoration: line-through;
+}
+
+.todo_container ul li:hover {
+  background-color: #ececec;
+}
+
+.todo_container ul li i {
+  float: right;
+  font-size: large;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+/* ===================================== */
+/* ========== Todo Input Form ========== */
+/* ===================================== */
+.todo_input {
+  padding: 15px;
+  width: 100%;
+}
+.todo_input form {
+  margin: 0px 5%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo_input form input {
+  height: 35px;
+  flex: 1;
+  border: solid 1px #30303055;
+  border-radius: 15px;
+  font-size: large;
+  padding: 8px;
+  color: #575757;
+}
+
+.todo_input form button {
+  background-color: #2ecc71;
+  cursor: pointer;
+  margin-left: 5px;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================= */
+/* ========== Todo Footer ========== */
+/* ================================= */
+.todo_footer {
+  width: 100%;
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo_footer button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  transition-duration: 0.3s;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.todo_footer button:hover {
+  background-color: #c9c9c922;
 }
